@@ -24,8 +24,8 @@ export class TableHandler extends dataHandler{
 
       tr.innerHTML = `
       <td class="user">
-        <img src="https://github.com/${user.login}.png" alt="Imagem de ${user.name}">
         <a href="https://github.com/${user.login}" target="_blank">
+        <img src="https://github.com/${user.login}.png" alt="Imagem de ${user.name}">
         <p>${user.name}</p>
         <span>/${user.login}</span>
         </a>
