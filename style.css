@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --fc-main: #E1E1E6;
+  --fs-main: 2rem;
+  --ff-main: 'Roboto', sans-serif;
+  
+  --input-color: #06191d;
+  --fc-input: #7C7C8A;
+  --fs-input: 1.6rem;
+  --fc-remove: #F75A68;
+  
+  --fill-button: #065E7C;
+  --fs-button: 1.4rem;
+  
+  --table-border: #4A808C;
+  --th-color: #092D38;
+  --bc-tr-standard: #030b0d;
+  --bc-tr-contrast: #06181c;
+  
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+body {
+  background-color: black;
+  
+  font-family: var(--ff-main);
+  font-size: var(--fs-main);
+  color: var(--fc-main);
+
+}
+
+#app {
+  max-width: 112rem;
+  margin: 8.5rem auto;
+
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+
+  height: 4.8rem;
+}
+
+.input-wrapper button {
+  display: flex;
+  align-items: center;
+
+  gap: .8rem;
+  height: 100%;
+  padding: 1.2rem 3.2rem;
+
+  background-color: var(--fill-button);
+  border: none;
+  border-radius: 5px;
+
+  font-size: var(--fs-button);
+  text-transform: uppercase;
+  color: var(--fc-main);
+  font-weight: 500;
+  font-family: var(--ff-main);  
+
+  transition: all 200ms;
+}
+
+.input-wrapper button:hover {
+  background-color: white;
+  color: var(--fill-button);
+}
+
+.input-wrapper button:hover svg path {
+  fill: var(--fill-button);
+}
+
+.input-wrapper input {
+  height: 100%;
+  width: 46rem;
+  padding: 1.6rem;
+
+  background-color: var(--input-color);
+  border: none;
+  border-radius: 5px;
+  color: var(--fc-input);
+
+  font-family: var(--ff-main);
+  font-size: var(--fs-input);
+}
+
+table {
+  margin-top: 8.6rem;
+
+  outline: 1px solid var(--table-border);
+  border-radius: 12px;
+  border-collapse: collapse;
+  
+  width: 100%;
+}
+
+table thead th {
+  background-color: var(--th-color);
+}
+
+table thead th:first-child {
+  border-radius: 12px 0 0 0;
+}
+
+table thead th:last-child {
+  border-radius: 0 12px 0 0;
+}
+
+table th,
+table td {
+  text-align: left;
+  padding: 1.6rem 4rem;
+  font-weight: bold;
+}
+
+td.user {
+  display: flex;
+  gap: 1.6rem;
+}
+
+td.user img {
+  width: 5.6rem;
+  border-radius: 50%;
+}
+
+td.user a {
+  text-decoration: none;
+  color: var(--fc-main);
+}
+
+td.user a span {
+  font-weight: normal;
+}
+
+table tbody tr {
+  background-color: var(--bc-tr-standard);
+}
+
+table tbody tr:nth-child(even) {
+  background-color: var(--bc-tr-contrast);
+}
+
+td .remove {
+  background: none;
+  border: none;
+  color: var(--fc-remove);
+
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+td .remove:hover {
+  cursor: pointer;
+}
